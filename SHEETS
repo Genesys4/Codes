@@ -1,0 +1,11 @@
+=QUERY(
+  UNIQUE(
+    FILTER(
+      {'ATS J'!C2:C \ 'ATS J'!B2:B};
+      'ATS J'!B2:B <> "";
+      'ATS J'!F2:F = "Entregue"
+    )
+  );
+  "SELECT Col1, Col2";
+  0
+)
