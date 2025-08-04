@@ -1,0 +1,25 @@
+=SE(
+  Z1 = "ATS J";
+  QUERY(
+    UNIQUE(
+      FILTER(
+        {'ATS J'!C2:C\ 'ATS J'!B2:B\ SE('ATS J'!E2:E < J1; "ATS"; "UC NA LOJA")};
+        NÚM.CARACT('ATS J'!B2:B)
+      )
+    );
+    "SELECT Col1, COUNT(Col2), Col3 GROUP BY Col1, Col3 LABEL Col1 'Loja Destino', COUNT(Col2) 'Qtd Ordens Mãe', Col3 'Justificativa'"
+  );
+  SE(
+    Z1 = "ATS A";
+    QUERY(
+      UNIQUE(
+        FILTER(
+          {'ATS A'!C2:C\ 'ATS A'!B2:B\ SE('ATS A'!E2:E < J1; "ATS"; "UC NA LOJA")};
+          NÚM.CARACT('ATS A'!B2:B)
+        )
+      );
+      "SELECT Col1, COUNT(Col2), Col3 GROUP BY Col1, Col3 LABEL Col1 'Loja Destino', COUNT(Col2) 'Qtd Ordens Mãe', Col3 'Justificativa'"
+    );
+    "Selecione uma aba válida"
+  )
+)
