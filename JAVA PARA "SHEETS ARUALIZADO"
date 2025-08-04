@@ -1,0 +1,15 @@
+function onEdit(e) {
+  // Nome das abas que queremos monitorar
+  const abasMonitoradas = ["ATS J", "ATS A"];
+
+  // Nome da aba de controle onde está a fórmula final
+  const abaResumo = "RESUMO"; // Troque se for outro nome
+  const celulaControle = "Z1"; // Onde ficará salvo o nome da aba editada
+
+  const abaEditada = e.source.getActiveSheet().getName();
+
+  if (abasMonitoradas.includes(abaEditada)) {
+    const planilha = e.source.getSheetByName(abaResumo);
+    planilha.getRange(celulaControle).setValue(abaEditada);
+  }
+}
